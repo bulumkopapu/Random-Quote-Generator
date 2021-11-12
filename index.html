@@ -7,22 +7,19 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/main.js" defer></script>
     <title>Random Quote</title>
-    <!-- <script src="./js/main.js" defer></script> -->
+    <script src="./js/main.js" defer></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <section>
         <div class="main-content container">
             <img src="./images/quoteImage.png" alt="">
-            <h1>It is only with the heart that
-                one can see rightly, what is
-                essential is invisible to the
-                eye.
+            <h1 id="title">Click On New Quote To Generate A New Qoute. Enjoy!
             </h1>
-            <p>Antoine de Saint-Exupery</p>
+            <p id="paragraph">Created by Bullz</p>
             <div class="social">
                 <img src="./images/twitter.png" alt="">
-                <button>New Quote</button>
+                <button onclick = "fetchQuote()"> New Quote</button>
             </div>
         </div>
     </section>
