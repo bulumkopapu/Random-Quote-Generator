@@ -1,11 +1,82 @@
 @import 'reset';
+
 body {
-    @include fontFamilyLarge(bold);
-    background: $gradient;
     height: 100vh;
     overflow-x: hidden;
-    padding: 0 24px 0 24px;
+    // padding: 0 24px 0 24px;
 }
+
+section {
+   display: flex;
+   justify-content: center;
+    
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.main-content {
+    position: relative;
+    z-index: 10;
+    margin-top: 60px;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding: 0 24px 0 24px;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(223, 219, 229, 0.5);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    @include desktop-screen {
+        margin-top: 260px;
+    }
+
+    img {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    h1 {
+        border-bottom:  solid #364BA7;
+        padding-bottom: 24px;
+    }
+    
+    p {
+        margin-top: 24px;
+    }
+
+    .social{
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 855px;
+        width: 100%;
+
+        @media only screen and (max-width: 415px) {
+            flex-direction: column-reverse;
+            margin-top: 48px;
+        }
+
+        button {
+            width: 230px;
+            height: 83px;
+            background: #364BA7;
+            border-radius: 10px;
+        }
+    }
+
+}
+
+
 
 
 

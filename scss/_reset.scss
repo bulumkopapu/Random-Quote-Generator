@@ -1,11 +1,9 @@
 //FONT INSTALL
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap');
 
 //COLOR VARIABLES
-$gradient: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);;
-$black: #1E1F36;
-$white: #ffffff;
-$accent: #F47B56;
+$blue: #364BA7;
+$pink: #F583A7;
 
 //FONT WEIGHTS
 $font-weights:(
@@ -17,31 +15,66 @@ $font-weights:(
 	@return map-get($font-weights, $weight);
 }
 
-//FONT FAMILY
-@mixin fontFamilySmall ($fontWeight){
-    font-family: 'Kumbh Sans', sans-serif;
-    font-style: normal;
-    font-weight: weight($fontWeight);
-    font-size: 13px;
-    line-height: 14px;
-    color: #4B4C5F;
+//MEDIA QUERIES
+@mixin desktop-screen {
+    @media (min-width: 768px) { @content }
 }
 
-@mixin fontFamilyLarge ($fontWeight){
-    font-family: 'Kumbh Sans', sans-serif;
+//FONT FAMILY
+@mixin headingFont ($size){
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: $size;
+    line-height: 66px;
+    text-align: center;
+    color: $blue;
+}
+
+@mixin paragraphFont ($size){
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: $size;
+    line-height: 56px;
+    text-align: center;
+    color: $pink;
+}
+
+@mixin buttonFont ($size){
+    cursor: pointer;
+    border: none;
+    font-family: Roboto;
     font-style: normal;
-    font-weight: weight($fontWeight);
-    font-size: 32px;
-    line-height: 32px;
-    color: $black;
+    font-weight: bold;
+    font-size: $size;
+    line-height: 42px;
+    text-align: center;
+    color: #F583A7;
 }
 
 h1 {
-    @include fontFamilyLarge(bold);
+    @include headingFont(46px);
+    @include desktop-screen {
+        @include headingFont(56px);
+       
+    }
 }
 
-p, a {
-    @include fontFamilySmall(regular);
+p {
+    @include paragraphFont(38px);
+    @include desktop-screen {
+        @include paragraphFont(48px);
+
+    }
+}
+
+button {
+    @include buttonFont(30px);
+    @include desktop-screen {
+        @include buttonFont(36px);
+
+    }
 }
 
 //CSS RESET
@@ -61,11 +94,8 @@ a {
 
 //CONTAINER SETTINGS
 .container {
-    max-width: 920px;
+    max-width: 1009px;
     margin: 0 auto;
 }
 
-//MEDIA QUERIES
-@mixin desktop-screen {
-    @media (min-width: 969px) { @content }
-}
+

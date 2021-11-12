@@ -1,6 +1,6 @@
 # New Project
 
-*This project is based on a challenge by [Frontendmentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam/hub/faq-accordion-card-Iffk00jPC) that requires a FAQ accordion card to be built as closely as possible to the given FIGMA design.*
+*This project is based on a challenge by [Code Room SA](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam/hub/faq-accordion-card-Iffk00jPC) that requires the development of a random quote generator that follows the exact specifications of the provided design.*
 
 ![Project Screenshot](/images/project.png)
 
@@ -13,4 +13,4 @@
 
 ---
 ## Launch
-View the live project [here](https://affectionate-swartz-538610.netlify.app/).
+View the live project [here]().
